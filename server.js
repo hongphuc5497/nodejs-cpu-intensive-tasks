@@ -1,8 +1,8 @@
 const http = require('http');
 const { fork } = require('child_process');
 const child = fork(`${__dirname}/fibo_runner.js`);
-let { EventEmitter } = require('events');
 
+let { EventEmitter } = require('events');
 let event = new EventEmitter();
 
 const server = http.createServer((req, res) => {
